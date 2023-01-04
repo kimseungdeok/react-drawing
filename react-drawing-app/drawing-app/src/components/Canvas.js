@@ -15,6 +15,11 @@ const Canvas = ({ width, height }) => {
     ctx.moveTo(start.x, start.y);
     ctx.lineTo(end.x, end.y);
     ctx.stroke();
+
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.arc(end.x, end.y, width / 2, 0, 2 * Math.PI);
+    ctx.fill();
   }
 
   return (
